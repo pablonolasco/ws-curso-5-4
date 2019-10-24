@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,3 +12,6 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::resource('buyers','Buyer/BuyerController',['only'=>['index','show']]);
+Route::resource('categories','Category/CategoryController',['except'=>['create','edit']]);
+Route::resource('products','Product/ProductController',['only'=>['index','show']]);
