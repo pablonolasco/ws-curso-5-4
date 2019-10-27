@@ -12,6 +12,15 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::resource('buyers','Buyer/BuyerController',['only'=>['index','show']]);
-Route::resource('categories','Category/CategoryController',['except'=>['create','edit']]);
-Route::resource('products','Product/ProductController',['only'=>['index','show']]);
+//Buyer- Comprandor
+Route::resource('buyers','Buyer\BuyerController',['only'=>['index','show']]);
+//Category-Categoria
+Route::resource('categories','Category\CategoryController',['except'=>['create','edit']]);
+//Products
+Route::resource('products','Product\ProductController',['only'=>['index','show']]);
+//Transaction- Transaciones
+Route::resource('transactions','Transaction\TransactionController',['only'=>['index','show']]);
+//Sellers- Vendedor
+Route::resource('sellers','Seller\SellerController',['only'=>['index','show']]);
+//Users-Usuario
+Route::resource('users','User\UserController',['except'=>['create','edit']]);
