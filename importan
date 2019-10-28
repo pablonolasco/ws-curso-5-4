@@ -1,0 +1,2 @@
+-comando para crear la migracion, debe de ir en orden alfabetico y en singular como los modelos
+php artisan make:migration category_product_table --create=category_product
