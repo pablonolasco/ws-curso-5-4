@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->text('description');
             $table->unsignedInteger('quantity');
+            $table->string('status');
             $table->string('image');
             $table->unsignedInteger('seller_id');
             $table->timestamps();

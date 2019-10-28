@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use Notifiable;
-
+    protected $table='users';// se agrego para que laravel cuando crea los seeders identifique buyer como seller en la misma tabla
     /**
      * The attributes that are mass assignable.
      *
