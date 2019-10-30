@@ -44,7 +44,7 @@ $factory->define(App\Product::class, function (Faker\Generator $faker) {
         'seller_id'=>User::all()->random()->id,
     ];
 });
-
+//
 $factory->define(App\Transaction::class, function (Faker\Generator $faker) {
     $vendedores=\App\Seller::has('products')->get()->random();
     $comprador=User::all()->except($vendedores->id)->random();
